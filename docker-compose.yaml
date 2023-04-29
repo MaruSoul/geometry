@@ -1,0 +1,17 @@
+version: "3"
+services:
+    php:
+        # імʼя контейнеру, яке будемо використовувати при вході на контейнер
+        container_name: geometry
+        build:
+            context: ./
+            # посилання на докерфайл з налаштуванням контейнеру
+            dockerfile: "docker/configs/php/Dockerfile"
+        # встановлюємо змінні оточення
+        environment:
+            XDEBUG_CONFIG: "remote_host={{YOUR_IP_ADDRESS}}"
+            PHP_IDE_CONFIG: "serverName=docker"
+        # прописуємо синхронізацію директорій
+        volumes:
+            - ./:/srv/src/geometry
+
