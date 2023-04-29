@@ -1,0 +1,20 @@
+{
+    "name": "ekaterinadavidovich/geometry",
+    "description": "This project is exemple my work for portfolio. This service knows how to count the different sizes of geometric shapes.",
+    "type": "project",
+    "require": {
+        "league/container": "^4.2"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Geometry\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "MaruSoul",
+            "email": "soulmeri0@gmail.com"
+        }
+    ]
+}
