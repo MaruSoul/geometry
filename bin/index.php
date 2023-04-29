@@ -4,12 +4,9 @@ use Geometry\Calculator\IAreaCalculator;
 use Geometry\Calculator\Shapes\{Circle, Square, Rectangle};
 
 require_once(__DIR__ . '/../vendor/autoload.php');
+require_once(__DIR__ . '/../src/container.php');
 
-$shapes = [
-    new Circle(666),
-    new Square(5),
-    new Rectangle(3, 5),
-];
+$shapes = $container->get('shapes');
 
 function showInfo(IAreaCalculator $shape): void
 {
